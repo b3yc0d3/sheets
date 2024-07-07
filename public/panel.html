@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>KW28 - Sheets</title>
+	<link rel="stylesheet" href="assets/photon/dist/css/photon.css">
+	<link rel="stylesheet" href="assets/styles/sheets.min.css">
+</head>
+
+<body>
+	<div class="window">
+		<header class="toolbar toolbar-header">
+			<div class="toolbar-actions">
+				<button id="btn-sidebar" class="btn btn-default btn-large object-hidden">
+					<span class="icon icon-menu"></span>
+				  </button>
+				<img class="img-circle media-object object-fit-cover" src="assets/img/avatar.webp" width="32"
+					height="32">
+			</div>
+		</header>
+
+		<div class="window-content">
+			<div class="pane-group">
+
+				<div class="pane-one-fifth">
+					<ul class="list-group">
+						
+						<li class="list-group-header">
+							<input id="search-cw" class="form-control" type="text" placeholder="Kalenderwochen durchsuchen...">
+						</li>
+
+						<li class="list-group-item warning">
+							<div class="media-body">
+								<strong>Bericht KW <u>25</u><span class="icon icon-record icon-pad-left"
+										style="color:#fc605b"></span></strong>
+								<p>17.06.2024 - 23.06.2024</p>
+							</div>
+						</li>
+
+						<li class="list-group-item">
+							<div class="media-body">
+								<strong>Kalenderwoche <u>26</u><span class="icon icon-record icon-pad-left"
+										style="color:#34c84a"></span></strong>
+								<p>24.06.2024 - 30.06.2024</p>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="media-body">
+								<strong>Kalenderwoche <u>27</u><span class="icon icon-record icon-pad-left"
+										style="color:#34c84a"></span></strong>
+								<p>01.07.2024 - 07.07.2024</p>
+							</div>
+						</li>
+						<li class="list-group-item active">
+							<div class="media-body">
+								<strong>Kalenderwoche <u>28</u><span class="icon icon-record icon-pad-left"
+										style="color:rgba(115, 116, 117, .5)"></span></strong>
+								<p>8.07.2024 - 14.07.2024</p>
+							</div>
+						</li>
+						<li class="list-group-item">
+							<div class="media-body">
+								<strong>Kalenderwoche <u>29</u><span class="icon icon-record icon-pad-left"
+										style="color:rgba(115, 116, 117, .5)"></span></strong>
+								<p>15.07.2024 - 21.07.2024</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+
+				<div class="pane pane-no-scroll">
+
+					<div class="rep-booklet disabled">
+						<table>			
+							<thead>
+								<tr>
+									<th></th>
+									<th>Ausgeführte Arbeiten, Unterricht, Unterweisungen, uw.</th>
+									<th>Einzel Stunden</th>
+									<th>Gesamt Stunden</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr id="monday">
+									<td>Montag</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+								<tr id="tuesday">
+									<td>Dienstag</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+								<tr id="Wednesday">
+									<td>Mitwoch</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+								<tr id="Thursday">
+									<td>Donnerstag</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+								<tr id="friday">
+									<td>Freitag</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+								<tr id="saturday">
+									<td>Samstag</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+								<tr id="sunday">
+									<td>Sonntag</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div class="rep-booklet-lines">
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+											<div contenteditable="true"></div>
+										</div>
+									</td>
+									<td>
+										<div contenteditable="true" class="rep-booklet-total-hours"></div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						<!-- DivTable.com -->
+						<p>&nbsp;</p>
+					</div>
+
+					<header class="toolbar toolbar-footer">
+						<div class="toolbar-actions">
+							<button class="btn btn-primary pull-right">
+								Fertig
+							</button>
+						</div>
+					</header>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

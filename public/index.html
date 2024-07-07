@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="assets/photon/dist/css/photon.css">
+	<link rel="stylesheet" href="assets/styles/sheets.min.css">
+</head>
+
+<body>
+	<div class="window"></div>
+
+	<script type="module">
+		import { h, text, patch } from "./script/superfine.js";
+		import { Window, Header } from "./script/components.js";
+
+		const setState = (state) =>
+			patch(
+				document.querySelector(".window"),
+				Window()
+			);
+
+		setState(0);
+	</script>
+</body>
+
+</html>
