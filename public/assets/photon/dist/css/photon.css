@@ -382,6 +382,13 @@ h6 {
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
 }
 
+.btn-primary .icon,
+.btn-positive .icon,
+.btn-negative .icon,
+.btn-warning .icon {
+  color: #fff !important;
+}
+
 .btn-primary {
   border-color: #388df8;
   border-bottom-color: #0866dc;

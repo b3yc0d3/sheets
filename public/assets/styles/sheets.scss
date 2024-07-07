@@ -11,7 +11,7 @@
 		tbody {
 			tr {
 				&.disabled {
-					opacity: .6;
+					opacity: .4;
 
 					&:active {
 						color: inherit !important;
@@ -123,7 +123,7 @@
 	}
 
 	&.disabled {
-		opacity: .6;
+		opacity: .4;
 	}
 }
 

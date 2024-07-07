@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Reports</title>
+  <link rel="stylesheet" href="/public/assets/photon/dist/css/photon.css">
+  <style>
+    .status-dot {
+      height: 10px;
+      width: 10px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .status-green {
+      background-color: green;
+    }
+
+    .status-red {
+      background-color: red;
+    }
+
+    .status-gray {
+      background-color: gray;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="window">
+    <!-- Navigation bar -->
+    <div class="toolbar toolbar-header">
+      <h1 class="title" id="student-name">Student Reports</h1>
+      <button class="btn btn-default pull-right" onclick="goBack()">
+        <span class="icon icon-left-open icon-text"></span>
+        Back
+      </button>
+    </div>
+
+    <!-- Content area -->
+    <div class="window-content">
+      <div class="pane-group">
+        <div class="pane">
+          <!-- Table to list weekly reports -->
+          <table class="table-striped">
+            <thead>
+              <tr>
+                <th>Week</th>
+                <th>Date Submitted</th>
+                <th>Total Hours</th>
+                <th>Summary</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="report-list">
+              <!-- Reports will be dynamically loaded here -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="toolbar toolbar-footer">
+      <span class="title">© 2024 Your Web App</span>
+    </div>
+  </div>
+
+  <!-- Include PhotonKit JS (if any needed for functionality) -->
+  <script src="https://unpkg.com/photonkit/dist/js/photon.js"></script>
+  <script>
+    // Sample data - replace this with actual data fetching logic
+    const reports = {
+      'john-doe': [
+        { week: 'Week 27', date: '2024-07-05', hours: 40, summary: 'Worked on project A, attended meetings', status: 'green' },
+        { week: 'Week 28', date: '2024-07-12', hours: 38, summary: 'Completed tasks B and C, team collaboration', status: 'red' }
+      ],
+      'jane-smith': [
+        { week: 'Week 27', date: '2024-07-05', hours: 40, summary: 'Worked on project X, attended meetings', status: 'green' },
+        { week: 'Week 28', date: '2024-07-12', hours: 35, summary: 'Completed tasks Y and Z, client interactions', status: 'gray' }
+      ]
+    };
+
+    function goBack() {
+      window.history.back();
+    }
+
+    function getQueryParameter(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
+    function loadReports() {
+      const studentId = getQueryParameter('student');
+      const studentReports = reports[studentId] || [];
+      const reportList = document.getElementById('report-list');
+      const studentNameElement = document.getElementById('student-name');
+
+      // Set the student's name in the header
+      const studentNames = {
+        'john-doe': 'John Doe',
+        'jane-smith': 'Jane Smith'
+        // Add more student names here
+      };
+      studentNameElement.textContent = studentNames[studentId] + ' - Reports';
+
+      // Populate the table with the student's reports
+      studentReports.forEach(report => {
+        const statusClass = `status-dot status-${report.status}`;
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${report.week}</td>
+          <td>${report.date}</td>
+          <td>${report.hours}</td>
+          <td>${report.summary}</td>
+          <td><span class="${statusClass}"></span></td>
+          <td>
+            <button class="btn btn-default btn-mini">View</button>
+            <button class="btn btn-primary btn-mini">Provide Feedback</button>
+          </td>
+        `;
+        reportList.appendChild(row);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', loadReports);
+  </script>
+</body>
+
+</html>

@@ -5,11 +5,14 @@ const Window = () => h("div", { class: "window" }, [
 		Button({ size: "large", props: { id: "btn-sidebar", class: "object-hidden" } }, [
 			Icon({ icon: "menu" })
 		]),
-		Image({ src: "assets/img/avatar.webp", shape: "circle", props: { class: "pull-right" } })
+		Button({ size: "large", props: { class: "pull-right" } }, [
+			Icon({ icon: "logout", padding: "right" }),
+			text("Abmelden")
+		]),
 	]),
 	h("div", { class: "window-content" }, [
 		PaneGroup({}, [
-			Pane({ size: "one-fifth" }, [
+			Pane({ size: "one-fifth", props: { id: "cw-search" } }, [
 				List([
 					ListHeader({}, [
 						h("input", { class: "form-control", id: "search-cw", type: "text", placeholder: "Kalenderwochen durchsuchen..." })
@@ -32,8 +35,9 @@ const Window = () => h("div", { class: "window" }, [
 					ReportBookletRow({ enabled: false, week_day: "sunday" }),
 				]),
 				Header("footer", [
-					Button({ size: "normal", type: "primary", props: { class: "pull-right", onclick: () => {alert("DONE")} } }, [
-						text("Fertig")
+					Button({ size: "normal", type: "primary", props: { class: "pull-right", onclick: () => { alert("DONE") } } }, [
+						Icon({ icon: "publish", padding: "right" }),
+						text("Einreichen")
 					])
 				])
 			])

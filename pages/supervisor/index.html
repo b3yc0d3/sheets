@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Supervisor Dashboard</title>
+	<link rel="stylesheet" href="/public/assets/photon/dist/css/photon.css">
+	<style>
+		.btn-view-reports {
+			display: inline-block;
+			width: 100px;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="window">
+		<!-- Navigation bar -->
+		<div class="toolbar toolbar-header">
+			<h1 class="title">Supervisor Dashboard</h1>
+		</div>
+
+		<!-- Content area -->
+		<div class="window-content">
+			<div class="pane-group">
+				<div class="pane">
+					<!-- Table to list students -->
+					<table class="table-striped">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>ID</th>
+								<th>Last Online</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>John Doe</td>
+								<td>12345</td>
+								<td>2024-07-05 14:22</td>
+								<td>
+									<button class="btn btn-default btn-view-reports"
+										onclick="viewReports('john-doe')">View Reports</button>
+								</td>
+							</tr>
+							<tr>
+								<td>Jane Smith</td>
+								<td>67890</td>
+								<td>2024-07-06 09:10</td>
+								<td>
+									<button class="btn btn-default btn-view-reports"
+										onclick="viewReports('jane-smith')">View Reports</button>
+								</td>
+							</tr>
+							<!-- More students can be added here -->
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+
+		<!-- Footer -->
+		<div class="toolbar toolbar-footer">
+			<span class="title">© 2024 Your Web App</span>
+		</div>
+	</div>
+
+	<!-- Include PhotonKit JS (if any needed for functionality) -->
+	<script src="https://unpkg.com/photonkit/dist/js/photon.js"></script>
+	<script>
+		function viewReports(studentId) {
+			// Redirect to the student's report page
+			window.location.href = 'student-reports.html?student=' + studentId;
+		}
+	</script>
+</body>
+
+</html>
+
+<!--
+<!-- Footer --
+<div class="toolbar toolbar-footer">
+	<a class="title" style="margin-left: 12px;" href="https://github.com/b3yc0d3/sheets">Sheets v0.1.0 (20240707
+		#0000000)</a>
+	<span class="title" style="margin-left: 12px;">© 2024 Niklas Kellerer</span>
+</div>
+-->
